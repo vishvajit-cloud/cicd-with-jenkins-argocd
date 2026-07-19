@@ -2,6 +2,10 @@ pipeline {
     agent none
 
     environment {
+        JAVA_HOME = "/usr/lib/jvm/java-21-openjdk-amd64"
+        PATH = "${JAVA_HOME}/bin:${env.PATH}"
+    }
+    environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-cred')
         IMAGE_NAME            = "yourdockerhubuser/simple-app"
         IMAGE_TAG              = "${env.BUILD_NUMBER}"
