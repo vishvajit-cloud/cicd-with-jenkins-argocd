@@ -12,9 +12,9 @@ pipeline {
     stages {
 
         stage('Checkout') {
-            agent { label 'maven-node' }
-            steps {
-                git url: 'https://github.com/vishvajit-cloud/cicd-with-jenkins-argocd.git', branch: 'main'
+    agent { label 'maven-node' }
+    steps {
+        git url: 'https://github.com/vishvajit-cloud/cicd-with-jenkins-argocd.git', branch: 'main'
             }
         }
 
